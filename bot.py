@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from openai import OpenAI
 from flask import Flask, request, jsonify
 import os
@@ -12,6 +13,7 @@ load_dotenv()
 
 # Flask setup
 app = Flask(__name__)
+CORS(app, origins=["https://pranshubot.netlify.app"]
 
 # OpenAI API Client Initialization
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
