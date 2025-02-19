@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 def load_style_data():
-    with open("dataset.txt.rtf", "r", encoding="utf-8") as file:
+    with open("dataset.txt", "r", encoding="utf-8") as file:
         return file.read()
 
 # Load environment variables from .env
